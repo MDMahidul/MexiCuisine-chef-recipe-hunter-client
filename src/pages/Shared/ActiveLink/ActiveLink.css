@@ -1,0 +1,10 @@
+.active{
+    color: rgb(8, 192, 1);
+    text-decoration: none;
+    font-weight: 700 !important;
+    border-bottom: 2px solid #FFC107;
+}
+.default{
+    text-decoration: none !important;
+    color: #757575;
+}
