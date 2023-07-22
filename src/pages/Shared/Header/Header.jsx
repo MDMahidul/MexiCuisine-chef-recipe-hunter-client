@@ -7,7 +7,7 @@ import ActiveLink from '../ActiveLink/ActiveLink';
 const Header = () => {
     const user = null;
     return (
-      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+      <Navbar  collapseOnSelect expand="lg" className="bg-body-tertiary shadow-sm">
         <Container>
           <Navbar.Brand className="fw-bolder fs-3" href="#home">
             <span className="text-warning">Mexi</span>

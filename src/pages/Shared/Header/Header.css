@@ -1,7 +1,7 @@
 .logo-last-name{
     color: rgb(8, 192, 1);
 }
-.nav-link:hover{
+.nav-link a:hover{
     color: rgb(8, 192, 1) !important;
 }
 .user-image{
