@@ -8,22 +8,28 @@ import Register from '../pages/Login/Register'
 import Terms from '../pages/Terms/Terms';
 import Error from '../pages/Error/Error';
 import ChefDetails from '../pages/ChefDetails/ChefDetails';
+import PrivateRoute from './PrivateRoute';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement:<Error></Error>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
         element: <Chefs></Chefs>,
-        loader: () => fetch('http://localhost:5000/chef')
+        loader: () => fetch("http://localhost:5000/chef"),
       },
       {
         path: "/chef/:id",
-        element: <ChefDetails/>,
-        loader: ({params}) => fetch(`http://localhost:5000/chef/${params.id}`)
+        element: (
+          <PrivateRoute>
+            <ChefDetails />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/chef/${params.id}`),
       },
       {
         path: "/blog",

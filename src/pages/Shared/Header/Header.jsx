@@ -7,6 +7,14 @@ import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
     const {user,logOut} = useContext(AuthContext);
+    
+    const handleLogOut = () => {
+      logOut()
+        .then()
+        .catch((error) => {
+          console.log(error);
+        });
+    };
     return (
       <Navbar
         collapseOnSelect
@@ -68,8 +76,8 @@ const Header = () => {
                     />
                   </OverlayTrigger>
                 </div>
-                <Link to="/register">
-                  <Button onClick={logOut} variant="success">
+                <Link to="/">
+                  <Button onClick={handleLogOut} variant="success">
                     Log Out
                   </Button>
                 </Link>
