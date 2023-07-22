@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Container, Nav, Navbar,Button } from 'react-bootstrap';
+import { Container, Nav, Navbar,Button,OverlayTrigger, Tooltip } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './Header.css'
 import ActiveLink from '../ActiveLink/ActiveLink';
@@ -48,15 +48,30 @@ const Header = () => {
               </Nav>
             ) : (
               <Nav>
-                <Link to="/login">
-                  <img
-                    className="user-image"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1024px-User-avatar.svg.png"
-                    alt=""
-                  />
-                </Link>
+                <div>
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={
+                      <Tooltip>
+                        {user.displayName ? user.displayName : "user"}
+                      </Tooltip>
+                    }
+                  >
+                    <img
+                      className="user-image"
+                      src={
+                        user.photoURL
+                          ? user.photoURL
+                          : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1024px-User-avatar.svg.png"
+                      }
+                      alt=""
+                    />
+                  </OverlayTrigger>
+                </div>
                 <Link to="/register">
-                  <Button onClick={logOut} variant="success">Log Out</Button>
+                  <Button onClick={logOut} variant="success">
+                    Log Out
+                  </Button>
                 </Link>
               </Nav>
             )}

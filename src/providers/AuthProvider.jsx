@@ -23,14 +23,17 @@ const AuthProvider = ({children}) => {
     const [loading,setLoading] = useState(true)
 
     const createUser = (email, password) => {
+        setLoading(true);
       return createUserWithEmailAndPassword(auth, email, password);
     };
 
      const signIn = (email, password) => {
+        setLoading(true);
        return signInWithEmailAndPassword(auth, email, password);
      };
 
     const handleGoogleSignIn = () => {
+        setLoading(true);
       signInWithPopup(auth, googleProvider)
         .then((result) => {
           const loggedUser = result.user;
@@ -43,6 +46,7 @@ const AuthProvider = ({children}) => {
         });
     };
     const handleGithubSignIn = () => {
+        setLoading(true);
       signInWithPopup(auth, githubProvider)
         .then((result) => {
           const loggedUser = result.user;
@@ -56,6 +60,7 @@ const AuthProvider = ({children}) => {
     };
 
      const logOut = () => {
+        setLoading(true);
        return signOut(auth);
      };
 

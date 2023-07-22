@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import { RouterProvider } from 'react-router-dom';
 import router from './routes/Routes.jsx';
 import { Toaster } from "react-hot-toast";
