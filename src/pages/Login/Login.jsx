@@ -18,14 +18,14 @@ const Login = () => {
       const from = location.state?.from?.pathname || "/";
 
     const handleLogIn=(e)=>{
+      const form = e.target;
       e.preventDefault();
-      console.log(email, password);
       signIn(email, password)
         .then((result) => {
           const loggedUser = result.user;
           console.log(loggedUser);
           toast("Logged in successfully!!!");
-          e.form.reset();
+          form.reset();
        navigate(from, { replace: true });
         })
         .catch((error) => {

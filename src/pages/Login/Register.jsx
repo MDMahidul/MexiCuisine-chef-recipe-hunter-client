@@ -1,13 +1,45 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const Register = () => {
+     const navigate = useNavigate();
+     const location = useLocation();
+     const from = location.state?.from?.pathname || "/";
+
+  const {createUser,updateProfile} = useContext(AuthContext);
       const [error, setError] = useState("");
       const [success, setSuccess] = useState("");
       const [accepted, setAccepted] = useState(false);
-    const handleRegister = ()=>{
+      const [email, setEmail] = useState("");
+      const [name, setName] = useState("");
+      const [photoUrl, setPhotoUrl] = useState("");
+      const [password, setPassword] = useState("");
 
+    const handleRegister = (e)=>{
+         const form = e.target;
+          e.preventDefault();
+          if (password.length < 6) {
+            setError(
+              "password must be at least 6 digits!!!"
+            );
+            return;
+          }
+          createUser(email, password)
+            .then((result) => {
+              const createdUser = result.user;
+              console.log(createdUser);
+              form.reset();
+              setError('');
+              toast.success("User Registered Successfully!!!");
+              navigate(from, { replace: true });
+            })
+            .catch((error) => {
+              console.log(error);
+              setError(error.message);
+            });
     }
 
      const handleAccepted = (event) => {
@@ -28,6 +60,7 @@ const Register = () => {
               name="name"
               type="name"
               placeholder="Enter your name"
+              onChange={(e) => setName(e.target.value)}
               required
             />
           </Form.Group>
@@ -38,6 +71,7 @@ const Register = () => {
               name="photo"
               type="text"
               placeholder="Enter photo url"
+              onChange={(e) => setPhotoUrl(e.target.value)}
               required
             />
           </Form.Group>
@@ -48,6 +82,7 @@ const Register = () => {
               name="email"
               type="email"
               placeholder="Enter your email address"
+              onChange={(e) => setEmail(e.target.value)}
               required
             />
           </Form.Group>
@@ -59,10 +94,11 @@ const Register = () => {
               name="password"
               type="password"
               placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
               required
             />
           </Form.Group>
-         <Form.Group className="mb-3" id="formGridCheckbox">
+          <Form.Group className="mb-3" id="formGridCheckbox">
             <Form.Check
               onClick={handleAccepted}
               name="accept"
@@ -73,7 +109,7 @@ const Register = () => {
                 </>
               }
             />
-          </Form.Group> 
+          </Form.Group>
           <div className="d-grid pt-2">
             <Button disabled={!accepted} type="submit" variant="secondary">
               Register
@@ -81,9 +117,9 @@ const Register = () => {
           </div>
           <div className="text-center py-3">
             <Form.Text className="text-success">
-              Already have an account? 
+              Already have an account?
               <Link className="text-danger ms-1" to="/login">
-                 Login
+                Login
               </Link>
             </Form.Text>
           </div>

@@ -8,6 +8,7 @@ import {
   signOut,
   GoogleAuthProvider,
   GithubAuthProvider,
+  updateProfile,
 } from "firebase/auth";
 import app from '../firebase/firebase.config'
 import { toast } from 'react-hot-toast';
@@ -82,7 +83,8 @@ const AuthProvider = ({children}) => {
        handleGoogleSignIn,
        handleGithubSignIn,
        logOut,
-       loading
+       loading,
+       updateProfile,
      };
 
     return (
