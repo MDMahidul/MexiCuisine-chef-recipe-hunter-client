@@ -17,7 +17,7 @@ const Banner = () => {
                   <p className="banner-subtitle">
                     Burger Bowl with Dill Relish
                   </p>
-                  <p className="banner-des">
+                  <p className="banner-des gray">
                     Trade fast-food for our delicious Burger Bowl featuring a
                     savory blend of ground beef and bison on a bed of creamy
                     rice with all your favorite burger toppings including juicy
@@ -27,7 +27,7 @@ const Banner = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 text-center">
                 <img className="w-75" src={burger} alt="" />
               </div>
             </div>
@@ -38,7 +38,7 @@ const Banner = () => {
                 <div className="text-center">
                   <h3 className="banner-title">Most Popular</h3>
                   <p className="banner-subtitle">Steak Street Tacos</p>
-                  <p className="banner-des">
+                  <p className="banner-des gray">
                     Who doesn't love tacos? Our healthy and balanced spin on
                     street tacos includes marinated 44 Farms beef knuckle, a
                     spanish rice pilaf that's filled with flavorful mix-ins, and
@@ -46,7 +46,7 @@ const Banner = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 text-center ">
                 <img className="w-75" src={steak} alt="" />
               </div>
             </div>
@@ -57,7 +57,7 @@ const Banner = () => {
                 <div className="text-center">
                   <h3 className="banner-title">Our Best Item</h3>
                   <p className="banner-subtitle">Chicken Enchiladas</p>
-                  <p className="banner-des">
+                  <p className="banner-des gray">
                     Soft, warm corn tortillas hug a filling of tender, juicy
                     shredded adobo chicken, fire-roasted corn, green chiles, and
                     fresh cilantro. Topped with our fresh made tomatillo salsa,

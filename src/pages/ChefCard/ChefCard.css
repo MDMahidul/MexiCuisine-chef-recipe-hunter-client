@@ -1,0 +1,12 @@
+Button:hover{
+    transition: 0.2s ease-out;
+    transform: scale(1.05);
+}
+
+.card-title{
+    color:#ffc107;
+    font-weight: 700;
+}
+.gray{
+    color: #757575
+}
