@@ -7,11 +7,17 @@ import ActiveLink from '../ActiveLink/ActiveLink';
 const Header = () => {
     const user = null;
     return (
-      <Navbar  collapseOnSelect expand="lg" className="bg-body-tertiary shadow-sm">
+      <Navbar
+        collapseOnSelect
+        expand="lg"
+        className="bg-body-tertiary shadow-sm"
+      >
         <Container>
-          <Navbar.Brand className="fw-bolder fs-3" href="#home">
-            <span className="text-warning">Mexi</span>
-            <span className="logo-last-name">Cuisine</span>
+          <Navbar.Brand className="fw-bolder fs-3">
+            <Link className='text-decoration-none' to='/'>
+              <span className="text-warning">Mexi</span>
+              <span className="logo-last-name">Cuisine</span>
+            </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

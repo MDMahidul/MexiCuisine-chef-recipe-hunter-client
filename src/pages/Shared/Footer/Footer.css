@@ -1,9 +1,16 @@
 ul li{
     list-style-type: none;
+    margin-left: -30px;
 }
 
 li a{
     text-decoration: none !important;
     color: #757575;
     font-weight: 700;
+}
+.social-links{
+    color: #757575;
+}
+.footer-des{
+     color: #757575;
 }
