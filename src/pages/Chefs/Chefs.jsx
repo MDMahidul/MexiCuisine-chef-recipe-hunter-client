@@ -12,7 +12,7 @@ const Chefs = () => {
     return (
       <Container>
         <Banner></Banner>
-        <div className='py-5'>
+        <div className='py-5 chef-section'>
           <h1 className='section-header text-center pb-5'>Famous Chefs</h1>
           <div className="row"> 
             {chefs[0].chefs.map((chef) => (

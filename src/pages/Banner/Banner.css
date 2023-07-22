@@ -18,7 +18,12 @@
 .carousel-control-next,.carousel-control-prev{
     display: none;
 }
-
+.carousel-indicators{
+        margin-bottom: -5rem !important;
+    }
+    .chef-section{
+        margin-top: 100px !important;
+    }
 @media only screen and (max-width:576px){
     .carousel{
         margin-bottom: 200px !important;

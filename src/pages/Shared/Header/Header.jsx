@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Container, Nav, Navbar,Button } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './Header.css'
 import ActiveLink from '../ActiveLink/ActiveLink';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Header = () => {
-    const user = null;
+    const {user,logOut} = useContext(AuthContext);
     return (
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="bg-secondary-subtle git shadow-sm"
+        className="bg-secondary-subtle shadow-sm pb-3"
       >
         <Container>
           <Navbar.Brand className="fw-bolder fs-3">
@@ -35,12 +36,14 @@ const Header = () => {
             {!user ? (
               <Nav>
                 <Link to="/login">
-                  <Button variant="success" className="me-2">
+                  <Button variant="success" className="me-3 mt-2">
                     Login
                   </Button>
                 </Link>
                 <Link to="/register">
-                  <Button variant="success">Register</Button>
+                  <Button className="mt-2" variant="success">
+                    Register
+                  </Button>
                 </Link>
               </Nav>
             ) : (
@@ -53,7 +56,7 @@ const Header = () => {
                   />
                 </Link>
                 <Link to="/register">
-                  <Button variant="success">Log Out</Button>
+                  <Button onClick={logOut} variant="success">Log Out</Button>
                 </Link>
               </Nav>
             )}

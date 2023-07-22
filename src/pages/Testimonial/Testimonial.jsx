@@ -6,7 +6,7 @@ const Testimonial = () => {
     return (
       <Container className="text-center">
         <h1 className="section-header text-center mt-5 pb-3">User Review</h1>
-        <Carousel className="pb-5 my-4 pt-3">
+        <Carousel className="tesitmonial pb-5 my-4 pt-3">
           <Carousel.Item interval={3000}>
             <div className="">
               <div>
