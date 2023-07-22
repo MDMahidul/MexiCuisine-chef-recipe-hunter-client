@@ -8,27 +8,25 @@ import './Banner.css'
 const Banner = () => {
     return (
       <Container>
-        <Carousel className="py-5 my-4">
+        <Carousel className="my-5">
           <Carousel.Item interval={3000}>
             <div className="row d-flex align-items-center pb-5">
               <div className="col-md-6">
                 <div className="text-center">
                   <h3 className="banner-title">New Arrival</h3>
                   <p className="banner-subtitle">
-                    Burger Bowl with Dill Relish
+                    Burger Bowl
                   </p>
                   <p className="banner-des gray">
                     Trade fast-food for our delicious Burger Bowl featuring a
                     savory blend of ground beef and bison on a bed of creamy
                     rice with all your favorite burger toppings including juicy
-                    grape tomatoes, sliced red onion and cheddar cheese. Our
-                    house-made Dill Pickle Relish provides the perfect finishing
-                    touch!
+                    grape tomatoes, sliced red onion and cheddar cheese.
                   </p>
                 </div>
               </div>
               <div className="col-md-6 text-center">
-                <img className="w-75" src={burger} alt="" />
+                <img className="w-75 img-fluid" src={burger} alt="" />
               </div>
             </div>
           </Carousel.Item>
@@ -47,7 +45,7 @@ const Banner = () => {
                 </div>
               </div>
               <div className="col-md-6 text-center ">
-                <img className="w-75" src={steak} alt="" />
+                <img className="w-75 img-fluid" src={steak} alt="" />
               </div>
             </div>
           </Carousel.Item>
@@ -55,7 +53,7 @@ const Banner = () => {
             <div className="row d-flex align-items-center pb-5">
               <div className="col-md-6">
                 <div className="text-center">
-                  <h3 className="banner-title">Our Best Item</h3>
+                  <h3 className="banner-title">Our Best</h3>
                   <p className="banner-subtitle">Chicken Enchiladas</p>
                   <p className="banner-des gray">
                     Soft, warm corn tortillas hug a filling of tender, juicy
@@ -67,7 +65,7 @@ const Banner = () => {
                 </div>
               </div>
               <div className="col-md-6 text-center">
-                <img className="w-75" src={enchiladas} alt="" />
+                <img className="w-75 img-fluid" src={enchiladas} alt="" />
               </div>
             </div>
           </Carousel.Item>

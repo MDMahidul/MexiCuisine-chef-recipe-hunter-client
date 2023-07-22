@@ -4,7 +4,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const ChefCard = ({chef}) => {
-    const {name,imageURL,yearsOfExperience,numRecipes,likes} = chef;
+    const {id,name,imageURL,yearsOfExperience,numRecipes,likes} = chef;
     return (
       <div className="col-md-4 mb-4">
         <div className="card border-0 shadow">
@@ -23,7 +23,9 @@ const ChefCard = ({chef}) => {
               <span className="fw-bold">Likes: </span>
               {likes}
             </p>
-            <Button to="">View Recipes</Button>
+            <Link to={`/chef/${id}`}>
+              <Button>View Recipes</Button>
+            </Link>
           </div>
         </div>
       </div>

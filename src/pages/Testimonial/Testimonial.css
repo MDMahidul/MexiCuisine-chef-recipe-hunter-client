@@ -11,5 +11,14 @@
     color: #757575;
 }
 .carousel{
-    height: 450px !important;
+    height: 400px !important;
+}
+
+@media only screen and (max-width:576px){
+    .carousel{
+        margin-bottom: 300px !important;
+    }
+    .carousel-indicators{
+        margin-bottom: -14rem !important;
+    }
 }

@@ -24,10 +24,7 @@ const Testimonial = () => {
                   all levels of cooking expertise. Whether you're a beginner or
                   a seasoned cook, you'll find something delicious to try. The
                   step-by-step instructions with accompanying images make the
-                  cooking process a breeze. I love the way the website is
-                  organized, making it easy to search for specific dishes or
-                  ingredients. Kudos to MexiCuisine for bringing the flavors of
-                  Mexico right to my kitchen!
+                  cooking process a breeze.
                 </p>
               </div>
             </div>
@@ -50,10 +47,7 @@ const Testimonial = () => {
                   craving for more. The featured chef profiles add a personal
                   touch to the recipes and offer valuable insights. The
                   user-friendly interface and responsive design make it a joy to
-                  browse the site on any device. I've tried several recipes, and
-                  each one has turned out exceptionally flavorful and authentic.
-                  I highly recommend MexiCuisine to all foodies looking to
-                  explore the vibrant flavors of Mexico.
+                  browse the site on any device. .
                 </p>
               </div>
             </div>
@@ -76,11 +70,7 @@ const Testimonial = () => {
                   by providing options for various dietary preferences,
                   including gluten-free and vegetarian dishes. The website's
                   layout is intuitive, making it easy to navigate and filter
-                  recipes based on my requirements. I appreciate the nutritional
-                  information provided for each recipe, helping me make informed
-                  choices. The mouthwatering images accompanying each recipe are
-                  an added bonus. Thank you, MexiCuisine, for making my culinary
-                  journey enjoyable and inclusive
+                  recipes based on my requirements. 
                 </p>
               </div>
             </div>
@@ -103,11 +93,7 @@ const Testimonial = () => {
                   to innovative twists. The website's attention to detail, such
                   as cooking tips and ingredient substitutions, ensures that
                   even beginners can confidently prepare a scrumptious Mexican
-                  meal. The interactive community aspect, with user ratings and
-                  reviews, fosters a sense of community among food enthusiasts.
-                  MexiCuisine has undoubtedly become an indispensable resource
-                  in my kitchen. I'm grateful for the inspiration and culinary
-                  adventure it has provided!
+                  meal. 
                 </p>
               </div>
             </div>

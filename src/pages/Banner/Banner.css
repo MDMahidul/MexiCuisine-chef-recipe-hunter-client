@@ -18,3 +18,12 @@
 .carousel-control-next,.carousel-control-prev{
     display: none;
 }
+
+@media only screen and (max-width:576px){
+    .carousel{
+        margin-bottom: 200px !important;
+    }
+    .carousel-indicators{
+        margin-bottom: -14rem !important;
+    }
+}

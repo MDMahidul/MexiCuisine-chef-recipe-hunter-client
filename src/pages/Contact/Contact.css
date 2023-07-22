@@ -1,0 +1,12 @@
+.contact-form{
+    width: 75%;
+    margin: auto;
+    padding: 45px !important;
+}
+@media only screen and (max-width:576px){
+    .contact-form{
+    width: 97%;
+    margin: auto;
+    padding: 25px !important;
+}
+}
