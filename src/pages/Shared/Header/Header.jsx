@@ -10,11 +10,11 @@ const Header = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className="bg-body-tertiary shadow-sm"
+        className="bg-secondary-subtle git shadow-sm"
       >
         <Container>
           <Navbar.Brand className="fw-bolder fs-3">
-            <Link className='text-decoration-none' to='/'>
+            <Link className="text-decoration-none" to="/">
               <span className="text-warning">Mexi</span>
               <span className="logo-last-name">Cuisine</span>
             </Link>

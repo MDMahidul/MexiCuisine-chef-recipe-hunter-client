@@ -8,7 +8,7 @@ const ChefDetails = () => {
   const chefs = useLoaderData();
   const { id, name, imageURL, yearsOfExperience, numRecipes, likes,bio,recipes } =
     chefs.item;
-  console.log(chefs);
+
   return (
     <Container className="py-5">
       <div className="card mb-3">
@@ -41,7 +41,7 @@ const ChefDetails = () => {
         </div>
       </div>
       <div className="my-5 ">
-        <h2 className="fw-bold text-center">Recipes of {name}</h2>
+        <h2 className="fw-bold text-center pt-4 my-5">Recipes of {name}</h2>
         <div className="row">
           {recipes.map((recipe) => (
             <RecipeCard key={recipe.id} recipe={recipe}></RecipeCard>

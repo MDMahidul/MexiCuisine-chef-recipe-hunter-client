@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa
 
 const Footer = () => {
   return (
-    <div className="bg-body-tertiary shadow-lg">
+    <div className="bg-secondary-subtle shadow-lg">
       <Container>
         <div className="row py-5">
           <div className="col-md-3">
@@ -22,7 +22,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-md-3">
-            <h5 className="gray">Follow Us On</h5>
+            <h5 className="gray pb-2  border-bottom border-2">Follow Us On</h5>
             <div className="d-flex flex-column fw-bold social-links  mt-3">
               <p>
                 <a href="#">
@@ -51,7 +51,9 @@ const Footer = () => {
             </div>
           </div>
           <div className="col-md-3">
-            <h5 className="gray">Important Links</h5>
+            <h5 className="gray pb-2  border-bottom border-2">
+              Important Links
+            </h5>
             <ul className="d-flex flex-column  gap-3">
               <li>
                 <Link to="/">Home</Link>
@@ -68,7 +70,9 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-md-3">
-            <h5 className="gray">Submit Your Comments</h5>
+            <h5 className="gray pb-2 border-bottom border-2">
+              Submit Your Comments
+            </h5>
             <div className="mb-3">
               <input
                 type="email"
