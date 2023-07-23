@@ -7,11 +7,15 @@ const Error = () => {
     <div>
       <div className="d-flex align-items-center justify-content-center vh-100">
         <div className="text-center">
-          <h1 className="display-1 fw-bold">404</h1>
+          <img
+            src="https://seosherpa.com/wp-content/uploads/2020/12/404-error-page-header-transparent.png"
+            alt=""
+          />
           <p className="fs-3">
             {" "}
             <span className="text-danger">Opps!</span> Page not found.
           </p>
+          <p className="lead"> {status || 404}</p>
           <p className="lead">{error.message}</p>
           <Link to="/" className="my-btn">
             Go Home

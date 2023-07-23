@@ -70,9 +70,8 @@ const Register = () => {
               className="bg-secondary-subtle bg-opacity-25"
               name="photo"
               type="text"
-              placeholder="Enter photo url"
+              placeholder="Enter photo url (optional)"
               onChange={(e) => setPhotoUrl(e.target.value)}
-              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formGroupEmail">
